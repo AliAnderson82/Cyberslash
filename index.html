@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta property="og:title" content="Download Cybers/ash>
+    <meta property="og:description" content="Anonimity Rules.">
+    <meta property="og:image" content="Assets/Logos/favicon.png">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Download Cybers/ash">    
+    <title>Download Cybers/ash</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="Assets/Logos/favicon.png" type="image/x-icon">
+</head>
+<body>
+    <div class="navbar-container">
+    <div class="navbar">
+        <div class="logo">
+            <img src="Assets/Logos/logo.png" alt="name">
+        </div>
+        </div>
+    </div>
+    <div class="content-container">
+        <div id="page1" class="content active">
+            <div class="text-container">
+                <h2>Cybers/ash</h2>
+                <p>Anonimity Rules.</p>
+            </div>
+            <p>Cybers/ash is a secure communications and social media platform that puts user anonimity as its #1 priority.</p>
+            <p style="opacity: 0.65;"></p>
+            <div class="cards-container">
+                <div class="card">
+                    <img src="Assets/Icons/explorer.ico" alt="Explorer Icon">
+                    <h3>Downloads</h3>
+                    <a class="download-button" href="./Cyberslash.apk">Android</a>
+                    <a class="download-button" href="https://alianderson82.github.io/AliAnderson82_old/">Windows</a>
+                    <a class="download-button" href="https://cyberslash.liara.run/">Web App</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-links">
+            <p>© Cyberslash® LLC. 2026, All rights reserved.</p>
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll('.link a').forEach(link => {
+            link.addEventListener('click', event => {
+                event.preventDefault();
+                const targetId = link.getAttribute('data-target');
+    
+                document.querySelectorAll('.content').forEach(content => {
+                    content.classList.remove('active');
+                });
+    
+                document.getElementById(targetId).classList.add('active');
+            });
+        });
+    
+        document.querySelectorAll('.content').forEach(content => {
+            if (content.id !== 'page1') content.classList.remove('active');
+        });
+    </script>    
+</body>
+</html>
